@@ -2,16 +2,6 @@ import React from 'react'
 import {useQuery, gql} from "@apollo/client"
 import styled from 'styled-components'
 
-const CHAR_QUERY = gql `
-  query Query {
-    characters {
-      results {
-        name
-        image
-      }
-    }
-  }`
-
 const Container = styled.div`
 display: grid;
 align-items: center;
@@ -38,8 +28,17 @@ displlay: flex;
 background-color: #87A96B;
 `
 const Paragraph= styled.img`
-
 `
+
+const CHAR_QUERY = gql `
+  query Query {
+    characters {
+      results {
+        name
+        image
+      }
+    }
+  }`
 
 function Card() {
   const { data, loading, error} =useQuery(CHAR_QUERY);
