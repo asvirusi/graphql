@@ -8,11 +8,17 @@ const client = new ApolloClient({
     cache: new InMemoryCache()
 })
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-<ApolloProvider client ={client}>
-    <App />
-</ApolloProvider>)
+const container = document.getElementById('root');
+if (container) {
+    const root = ReactDOM.createRoot(container);
+    root.render(
+        <ApolloProvider client={client}>
+            <App />
+        </ApolloProvider>
+    );
+} else {
+    console.error("Root container not found");
+}
 
 
 // If you want to start measuring performance in your app, pass a function
