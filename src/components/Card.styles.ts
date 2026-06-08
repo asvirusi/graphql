@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: grid;
   align-items: center;
-  grid-gap: 5rem;
+  gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 3fr));
   justify-items: center;
   margin: 5rem`
@@ -22,8 +22,14 @@ export const StyledBackground = styled.div`
   background-color: #FFFF8F;` 
 
 export const FlexContainer = styled.div`
-  displlay: flex;
   background-color: #87A96B;`
 
-export const CharImage= styled.img`
-  height: auto;`
+export const CharImage= styled.img``
+
+export const Input = styled.input`
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 50%;
+  margin-bottom: 2rem;`
