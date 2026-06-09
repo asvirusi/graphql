@@ -1,9 +1,27 @@
 import React from 'react';
-import Card from "./components/Card"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Character from './pages/Character';
+import Favorites from './pages/Favorites';
+import Home from './pages/Home';
+import { StyledLink } from './pages/styles';
+
 
 function App() {
   return (
-    <Card></Card>
+    <BrowserRouter>
+      <nav>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/favorites">Favorites</StyledLink>
+      </nav>
+      <Routes>
+        
+            <Route path="/" element={<Home />} />
+            <Route path="/character/:id" element={<Character />} />
+            <Route path="/favorites" element={<Favorites />} />
+  
+      </Routes>
+  </BrowserRouter>
+    
   )
 }
 
