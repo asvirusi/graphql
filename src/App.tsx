@@ -1,10 +1,9 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Character from './pages/Character';
-import Favorites from './pages/Favorites';
-import Home from './pages/Home';
-import { StyledLink } from './pages/styles';
-
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Character from "./pages/Character";
+import Favorites from "./pages/Favorites";
+import Home from "./pages/Home";
+import { StyledLink } from "./pages/styles";
 
 function App() {
   return (
@@ -14,16 +13,13 @@ function App() {
         <StyledLink to="/favorites">Favorites</StyledLink>
       </nav>
       <Routes>
-        
-            <Route path="/" element={<Home />} />
-       
-            <Route path="/character/:id" element={<Character />} />
-            <Route path="/favorites" element={<Favorites />} />
-  
+        <Route path="/" element={<Home />} />
+
+        <Route path="/character/:id" element={<Character />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
-  </BrowserRouter>
-    
-  )
+    </BrowserRouter>
+  );
 }
 
 export default App;
