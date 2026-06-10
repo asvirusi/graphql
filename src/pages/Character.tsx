@@ -10,13 +10,12 @@ function Character() {
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>Error...</h1>;
 
-
-console.log("data", data?.characters.results);
+// console.log("data", data?.characters.results);
  const character = data ? 
   data?.characters.results.find((char) => char.id.toString() === id) : null;
 console.log(character);
   return (
-    <StyledDiv style={{textAlign: "center"}}>
+    <StyledDiv>
       <h1>Character ID: {id}</h1>
       <h2>Name: {character?.name}</h2>
       <CharImage src={character?.image} alt={character?.name} />

@@ -1,5 +1,5 @@
+import { Heart } from 'lucide-react'
 import styled from 'styled-components'
-// import { Heart } from 'lucide-react';
 
 export const Container = styled.div`
   display: grid;
@@ -26,9 +26,9 @@ export const FlexContainer = styled.div`
   background-color: #87A96B;`
 
 export const CharImage= styled.img`
-height: auto;
-width: 100%;
-margin-left: -8px;`
+  height: auto;
+  width: 100%;
+  margin-left: -8px;`
 
 export const Input = styled.input`
   display: block;
@@ -38,10 +38,15 @@ export const Input = styled.input`
   width: 50%;
   margin-bottom: 2rem;`
   
-//   export const StyledHeart = styled(Heart)`
-//   fill: yellow;
-//   cursor: pointer;
-//  `
-//  export const StyledButton = styled.button`
-//   background-color: #87A96B;
-//   `
+export const StyledHeartFilled = styled(Heart)`
+  fill: yellow;
+  cursor: pointer;`
+  
+export const StyledButton = styled.button`
+  background-color: #87A96B;
+  border: none;`
+  
+export const StyledHeart = styled(Heart)`
+  fill: none;
+  cursor: pointer;`
+   

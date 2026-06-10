@@ -7,8 +7,13 @@ export const StyledLink = styled(Link)`
     padding: 0.5rem;`
     
 export const StyledDiv = styled.div`
-    display: block;`
+    display: block;
+    text-align: center;`
 
 export const CharImage = styled.img`
     height: auto;
     width: 50%;`
+
+export const FavCharImage = styled.img`
+  height: auto;
+  width: 100%;`
