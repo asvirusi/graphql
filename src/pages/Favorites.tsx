@@ -36,6 +36,7 @@ export function Favorites() {
                 <FavCharImage src={char.image} alt={char.name} />
                 <Name>{char.name}</Name>
                 <StyledButton
+                  aria-label="Add or remove favorites"
                   type="button"
                   onClick={() => {
                     const removed = items.filter(

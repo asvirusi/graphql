@@ -56,9 +56,10 @@ function Card() {
 
   return (
     <StyledBackground>
-      <Title data-cy="title">Characters and images</Title>
+      <Title data-testid="title">Characters and images</Title>
       <Input
         type="text"
+        id="search"
         placeholder="Search by name or ID"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -66,21 +67,24 @@ function Card() {
       <Container>
         {filteredResult?.map((char, i) => (
           <FlexContainer key={char.id ?? `${char.name}-${i}`}>
-            <StyledLink to={`/character/${char.id}`}>
-              <CharImage 
-                src={char.image} 
-                alt={char.name} />
+            <StyledLink
+              to={`/character/${char.id}`}
+              aria-label="to Character page"
+            >
+              <CharImage src={char.image} alt={char.name} />
               <Name>{char.name}</Name>
             </StyledLink>
             {favorite.some((fav) => fav.id === char.id) ? (
-              <StyledButton 
+              <StyledButton
+                data-testid="fav"
+                aria-label="Add or remove favorites"
                 onClick={() => handleFavorite(char.id)}
                 type="button"
               >
                 <StyledHeartFilled />
               </StyledButton>
             ) : (
-              <StyledButton 
+              <StyledButton
                 onClick={() => handleFavorite(char.id)}
                 type="button"
               >

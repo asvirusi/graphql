@@ -9,8 +9,12 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/favorites">Favorites</StyledLink>
+        <StyledLink to="/" aria-label="home page">
+          Home
+        </StyledLink>
+        <StyledLink to="/favorites" aria-label="favorites page">
+          Favorites
+        </StyledLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
